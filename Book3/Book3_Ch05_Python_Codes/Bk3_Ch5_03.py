@@ -20,11 +20,11 @@ y_line_2 = (94 - 2*x_array)/4
 
 fig, ax = plt.subplots()
 
-plt.plot(x_array, y_line_1, color = '#0070C0')
-plt.plot(x_array, y_line_2, color = 'g')
+plt.plot(x_array, y_line_1, color='#0070C0')
+plt.plot(x_array, y_line_2, color='g')
 
 # solution of linear equations
-plt.plot(23,12,marker = 'x', markersize = 12)
+plt.plot(23, 12, marker='x', markersize=12)
 plt.axvline(x=23, color='r', linestyle='--')
 plt.axhline(y=12, color='r', linestyle='--')
 
@@ -36,11 +36,14 @@ plt.xticks(np.arange(0, 30 + 1, step=5))
 plt.yticks(np.arange(0, 30 + 1, step=5))
 plt.axis('scaled')
 plt.minorticks_on()
-ax.grid(which='minor', linestyle=':', 
+ax.grid(which='minor', linestyle=':',
         linewidth='0.5', color=[0.8, 0.8, 0.8])
-ax.set_xlim(0,30); ax.set_ylim(0,30)
+ax.set_xlim(0, 30)
+ax.set_ylim(0, 30)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
-ax.grid(linestyle='--', linewidth=0.25, color=[0.5,0.5,0.5])
+ax.grid(linestyle='--', linewidth=0.25, color=[0.5, 0.5, 0.5])
+
+plt.show()

@@ -11,29 +11,31 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def fig_decor(ax):
 
     ax.set_xlabel('x')
     ax.set_ylabel('y')
-    
+
     ax.hlines(y=0, xmin=-8, xmax=8, color='k')
     ax.vlines(x=0, ymin=-8, ymax=8, color='k')
-    
+
     ax.set_xticks(np.arange(-8, 8 + 1, step=1))
     ax.set_yticks(np.arange(-8, 8 + 1, step=1))
-    
-    ax.axis('scaled')
-    ax.grid(linestyle='--', linewidth=0.25, color=[0.5,0.5,0.5])
 
-    ax.set_xbound(lower = -8, upper = 8)
-    ax.set_ybound(lower = -8, upper = 8)
+    ax.axis('scaled')
+    ax.grid(linestyle='--', linewidth=0.25, color=[0.5, 0.5, 0.5])
+
+    ax.set_xbound(lower=-8, upper=8)
+    ax.set_ybound(lower=-8, upper=8)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     ax.spines['left'].set_visible(False)
 
-x_array = np.linspace(-8,8)
-y_array = np.linspace(-8,8)
+
+x_array = np.linspace(-8, 8)
+y_array = np.linspace(-8, 8)
 
 # orthogonal
 fig, ax = plt.subplots()
@@ -76,3 +78,5 @@ ax.plot(x1, y_array)
 # axvline
 ax.plot(x2, y_array)
 fig_decor(ax)
+
+plt.show()
